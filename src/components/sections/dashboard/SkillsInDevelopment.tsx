@@ -17,7 +17,7 @@ const EmployeeSkillsChart: React.FC<EmployeeSkillsChartProps> = ({ data }) => {
 
   return (
     <section id="EmployeeSkillsChart" >
-    <div className="bg-white shadow-lg mt-8 w-full md:w-[55vw] my-auto h-[68vh] rounded-lg p-6">
+    <div className="bg-white shadow-lg mt-8 w-full md:w-[55vw] my-auto h-[64vh] rounded-lg p-6">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">Employee Skills Chart</h2>
       <ResponsiveContainer width="100%" height={400}>
         <BarChart

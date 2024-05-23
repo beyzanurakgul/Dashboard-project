@@ -1,3 +1,4 @@
+// Courses.tsx
 import React from 'react';
 import GenericTable from '../../ui/GenericTable';
 
@@ -10,11 +11,11 @@ interface Course {
 }
 
 interface CoursesProps {
-  inProgressCourses: Course[];
-  upcomingCourses: Course[];
+  inProgressCourses?: Course[];
+  upcomingCourses?: Course[];
 }
 
-const Courses: React.FC<CoursesProps> = ({ inProgressCourses, upcomingCourses }) => {
+const Courses: React.FC<CoursesProps> = ({ inProgressCourses = [], upcomingCourses = [] }) => {
   const combinedCourses = [...inProgressCourses, ...upcomingCourses];
 
   const columns = [
@@ -24,19 +25,17 @@ const Courses: React.FC<CoursesProps> = ({ inProgressCourses, upcomingCourses })
     { header: 'Due Date', accessor: 'due_date' as keyof Course },
     { header: 'Status', accessor: 'status' as keyof Course },
   ];
-  
 
   return (
-    <section id="Courses" >
-    <div className="bg-white shadow-lg xs:h-[40vh] smh-h-[45vh] md:h[48vh] lg:h-[50vh] xl:h-[55vh] 2xl:h-[50vh] rounded-lg p-6">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Courses</h2>
-      
-      {combinedCourses.length > 0 ? (
-        <GenericTable data={combinedCourses} columns={columns} />
-      ) : (
-        <p className="text-gray-500">No courses available.</p>
-      )}
-    </div>
+    <section id="Courses">
+      <div className="bg-white shadow-lg rounded-lg p-6">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Courses</h2>
+        {combinedCourses.length > 0 ? (
+          <GenericTable data={combinedCourses} columns={columns} />
+        ) : (
+          <p className="text-gray-500">No courses available.</p>
+        )}
+      </div>
     </section>
   );
 };
