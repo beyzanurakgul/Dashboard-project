@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import Spinner from '../components/Sipinner';
+import Spinner from '../components/layout/Sipinner';
 import TopEmployees from '../components/sections/dashboard/TopEmployees';
 import Teams from '../components/sections/dashboard/Teams';
 import SkillsInDevelopment from '../components/sections/dashboard/SkillsInDevelopment';

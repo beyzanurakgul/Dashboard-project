@@ -1,6 +1,6 @@
 // App.tsx
 import React from 'react';
-import Layout from './components/Layout';
+import Layout from './components/layout/Layout';
 import Dashboard from './pages/Dashboard';
 import { QueryClient, QueryClientProvider } from 'react-query'; // QueryClient ve QueryClientProvider'ı içe aktar
 
