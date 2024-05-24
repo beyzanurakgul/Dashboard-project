@@ -1,5 +1,5 @@
 ## URL
-https://dashboard-project-c8jf57579-beyzas-projects-507dfd9f.vercel.app/
+https://dashboard-project-bdpi.vercel.app/
 
 
 
